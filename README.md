@@ -16,6 +16,7 @@ API REST desenvolvida em Python utilizando FastAPI, SQLAlchemy e MySQL para gest
 
 ## 📁 Estrutura do Projeto
 
+```text
 helpdesk-system/
 │
 ├── venv/
@@ -28,32 +29,46 @@ helpdesk-system/
 │   └── main.py
 └── tests/
     └── test_main.py
+```
 
 ---
 
 ## 🚀 Como Executar o Projeto
 
 1. **Clone o repositório:**
+```bash
 git clone https://github.com/MatosEdgar/helpdesk-system.git
 cd helpdesk-system
+```
 
 2. **Crie e ative o ambiente virtual:**
+```bash
 python -m venv venv
-venv\Scripts\activate
+```
+- **Windows:** `venv\Scripts\activate`
+- **Linux/macOS:** `source venv/bin/activate`
 
 3. **Instale as dependências:**
+```bash
 pip install -r requirements.txt
+```
 
 4. **Configure o Banco de Dados:**
 Ajuste as credenciais no arquivo `app/database.py` e crie o banco no MySQL Workbench:
+```sql
 CREATE DATABASE IF NOT EXISTS helpdesk_db;
+```
 Em seguida, execute o script para criar as tabelas:
+```bash
 python create_tables.py
+```
 
 5. **Inicie a aplicação:**
+```bash
 uvicorn app.main:app --reload
+```
 
-Acesse a documentação interativa em: http://127.0.0.1:8000/docs
+Acesse a documentação interativa em: `[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)`
 
 ---
 
@@ -61,4 +76,6 @@ Acesse a documentação interativa em: http://127.0.0.1:8000/docs
 
 Para executar a suíte de testes automatizados com o Pytest, execute:
 
+```bash
 python -m pytest -v
+```
